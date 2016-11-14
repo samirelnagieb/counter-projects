@@ -1,0 +1,132 @@
+
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font: normal 16px/1.2 "Helvetica Neue", sans-serif;
+    background: #555;
+    color: #fff;
+    overflow-x: auto;
+    padding-bottom: 50px;
+}
+
+header {
+    background: #606;
+    padding: 50px;
+    margin: -10px;
+}
+
+p {
+    font: normal 16px "Helvetica Neue", sans-serif;
+    margin: 0px 0px 8px 0px;
+    padding: 0px 0px 0px 0px;
+    color:#222;
+    overflow-x: auto;
+    text-align: justify;
+}
+
+h1 {
+    color: #fff
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    margin: 0px 16px 0px 0px;
+}
+
+.project {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:#000;
+    margin: 8px 0px 8px 0px;
+}
+
+.agency {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    color:#000;
+    margin: 0px 0px 8px 0px;
+}
+
+
+/* Time line */
+.timeline ul {
+    background: #555;
+    padding: 50px 0px;
+}
+
+/*La ligne de time line */
+.timeline ul li/*:nth-child(1) */{
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 10px; /*space between*/
+    background: #606;
+}
+
+/*Boule de timeline*/
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+}
+
+/*encadré de texte*/
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 16px 16px 8px 16px;
+    background: #FFF;
+}
+
+/* test de recherche book, article decallage droite */
+.timeline ul li:nth-child(odd) div {
+    margin-left: 40px;
+}
+
+/*Petite fleche  impaire */
+.timeline ul li:nth-child(odd) div::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: -16px;
+    border-width: 8px 16px 8px 0px;
+    border-color: transparent #FFF ;
+}
+
+/* test de recherche archi & art decallage gauche */
+.timeline ul li:nth-child(even) div {
+    margin-left: -465px;
+}
+
+/*Petite fleche  impaire */
+.timeline ul li:nth-child(even) div::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    left: 432px;
+    border-width: 8px 0px 8px 16px;
+    border-color: transparent #FFF ;
+}
